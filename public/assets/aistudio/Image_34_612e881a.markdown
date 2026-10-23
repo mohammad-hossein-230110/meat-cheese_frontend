@@ -1,0 +1,201 @@
+---
+name: Editorial Epicurean RTL
+colors:
+  surface: '#fff8f6'
+  surface-dim: '#e2d8d4'
+  surface-bright: '#fff8f6'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#fcf1ee'
+  surface-container: '#f6ece8'
+  surface-container-high: '#f1e6e2'
+  surface-container-highest: '#ebe0dd'
+  on-surface: '#1f1b19'
+  on-surface-variant: '#57423f'
+  inverse-surface: '#352f2d'
+  inverse-on-surface: '#f9eeeb'
+  outline: '#8a716e'
+  outline-variant: '#ddc0bb'
+  surface-tint: '#a23d30'
+  primary: '#2c0000'
+  on-primary: '#ffffff'
+  primary-container: '#530201'
+  on-primary-container: '#de6959'
+  inverse-primary: '#ffb4a8'
+  secondary: '#855310'
+  on-secondary: '#ffffff'
+  secondary-container: '#ffbc71'
+  on-secondary-container: '#794a04'
+  tertiary: '#2d0000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#4c0f0a'
+  on-tertiary-container: '#ce7367'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad4'
+  primary-fixed-dim: '#ffb4a8'
+  on-primary-fixed: '#410000'
+  on-primary-fixed-variant: '#83261b'
+  secondary-fixed: '#ffddba'
+  secondary-fixed-dim: '#fcba6e'
+  on-secondary-fixed: '#2b1700'
+  on-secondary-fixed-variant: '#673d00'
+  tertiary-fixed: '#ffdad5'
+  tertiary-fixed-dim: '#ffb4a9'
+  on-tertiary-fixed: '#3e0503'
+  on-tertiary-fixed-variant: '#783028'
+  background: '#fff8f6'
+  on-background: '#1f1b19'
+  surface-variant: '#ebe0dd'
+typography:
+  display-lg:
+    fontFamily: Bodoni Moda
+    fontSize: 56px
+    fontWeight: '600'
+    lineHeight: 68px
+  display-lg-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 36px
+    fontWeight: '600'
+    lineHeight: 44px
+  headline-lg:
+    fontFamily: Bodoni Moda
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 42px
+  headline-lg-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 26px
+    fontWeight: '600'
+    lineHeight: 34px
+  headline-md:
+    fontFamily: Bodoni Moda
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: 32px
+  title-lg:
+    fontFamily: Be Vietnam Pro
+    fontSize: 20px
+    fontWeight: '700'
+    lineHeight: 28px
+  title-md:
+    fontFamily: Be Vietnam Pro
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Be Vietnam Pro
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+  body-md:
+    fontFamily: Be Vietnam Pro
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Be Vietnam Pro
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-md:
+    fontFamily: Be Vietnam Pro
+    fontSize: 13px
+    fontWeight: '600'
+    lineHeight: 18px
+  label-sm:
+    fontFamily: Be Vietnam Pro
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 16px
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 0.75rem
+  margin: 2.5rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system establishes a balance between high-end culinary hospitality and institutional B2B procurement efficiency. Built specifically for restaurant branch managers and procurement directors, the interface translates the tactile heritage of aged wines, cured meats, and artisanal cheeses into a structured enterprise tool.
+
+The visual tone draws from **Editorial Minimalism** fused with **Tactile Luxury**:
+- **Atmosphere:** Generous breathing room, precise hairline dividers, structured typographic hierarchy, and warm ivory backdrops that avoid sterile software aesthetics.
+- **RTL-First Architecture:** Tailored fundamentally for right-to-left layout mechanics, optimizing Persian typographic flow, contextual actions, and data tables.
+- **Graphic Motif:** A refined, faint ampersand (`&`) monogram deployed as watermark accents, embossed container seals, and empty-state ornamentation.
+
+## Colors
+
+The palette references culinary cellarage, aged charcuterie, and parchment inventory sheets:
+
+- **Primary (`#530201` - Deep Burgundy):** Primary interactive elements, critical branch actions, high-level headers, and focal brand moments. Hover transitions shift to `#6B0B0A`.
+- **Secondary (`#B77E39` - Warm Gold):** Accents, verified order badges, premium inventory highlights, and active status indicators.
+- **Tertiary (`#350101` - Dark Burgundy):** Deep borders, footer foundations, active navigation states, and extreme contrast text accents.
+- **Neutral Surface Hierarchy:**
+  - Base Canvas: Warm Ivory (`#F7F5F1`)
+  - Elevated Cards & Containers: Pure White (`#FFFFFF`)
+  - Section Dividers & Table Shading: Cream (`#EFE9E2`) and Soft Beige (`#D8D1C9`)
+- **Typography & Copy:** Primary readable text utilizes Charcoal (`#26211F`), with supporting metadata, secondary metrics, and table labels rendered in Muted Gray (`#77716D`).
+
+## Typography
+
+Typography governs the dual identity of culinary prestige and rapid batch purchasing:
+
+- **Editorial Latin & Numeral Display (`Bodoni Moda`):** Utilized for the global wordmark, order reference codes, financial totals, SKU serials, and high-impact metric counters. 
+- **Persian Text Execution:** For production rendering, link standard Iranian web fonts (Vazirmatn or IRANSansX) directly to the system root, matched symmetrically in weight and line-height scale to the defined tokens. Persian body copy preserves open line-heights (`1.6` to `1.7`) to maintain legibility for complex diacritics and character ligatures in dense supply tables.
+- **Tabular Numerals:** All procurement tables, weight metrics (KG/GR), currency formats (IRR/IRT), and inventory quotas must utilize monospace or tabular figures (`tnum`) to ensure aligned vertical scanning.
+
+## Layout & Spacing
+
+The layout model is anchored on a 12-column responsive grid configured for RTL reading dynamics:
+
+- **RTL Fluidity:** The primary canvas flows from right to left. The primary sidebar navigation docks to the screen right, catalogs reflow down and leftwards, and transactional trays (e.g., branch cart summaries) dock to the screen left.
+- **Breakpoints:**
+  - **Desktop (1200px+):** Fixed right-hand branch switch and master navigation (280px), fluid 12-column catalog/data grid with `gutter: 1.5rem` and `margin: 2.5rem`.
+  - **Tablet (768px - 1199px):** Condensed icon/flyout right navigation, 8-column layout, `gutter: 1rem`.
+  - **Mobile (< 768px):** Single-column stack, persistent bottom ordering bar, top header with branch selection sheet, `margin: 1rem`.
+- **Rhythm:** Spacing follows an intentional 4px/8px modular scale. Inner card paddings strictly observe `space-lg` (24px) to retain an uncluttered, premium feel despite data density.
+
+## Elevation & Depth
+
+Visual hierarchy uses low-contrast architectural framing over heavy drop shadows:
+
+- **Tonal Tiers:** Depth is articulated through layer shifts. The canvas sits at `#F7F5F1`. Working panels and cards lift onto `#FFFFFF`. Embedded data sheets, search inputs, and inactive tabs recede into `#EFE9E2`.
+- **Hairline Outlines:** Avoid heavy structural shadows. Instead, leverage 1px structural borders rendered in `#D8D1C9` (Soft Beige) or translucent burgundy (`rgba(83, 2, 1, 0.08)`).
+- **Floating Modals & Quick-Order Drawers:** For flyout carts and order-confirmation modals, implement a warm, diffused ambient shadow:
+  - `box-shadow: 0 16px 40px -8px rgba(38, 33, 31, 0.08), 0 0 0 1px rgba(216, 209, 201, 0.6)`
+
+## Shapes
+
+The system implements a refined, tailored shape profile (`roundedness: 1`):
+
+- **Edge Definition:** Standard containers, buttons, and inputs adopt a subtle `0.25rem` (4px) corner radius. Outer cards and order summary panels scale to `rounded-lg` (`0.5rem` / 8px).
+- **Philosophy:** Rounded shapes remain disciplined and tailored. Avoid pill-shaped buttons or overly playful bubble radii, reinforcing an institutional, reliable atmosphere suited for commercial supply orders.
+- **Motif Insets:** Category cards and seasonal cuts feature subtle geometric cutaways or hairline double-borders inspired by traditional copperplate invoices.
+
+## Components
+
+### Buttons
+- **Primary Order Button:** Deep Burgundy (`#530201`) fill, Pure White text, 4px radius, `space-md` horizontal padding. Hover shifts to `#6B0B0A`. Active state deploys `#350101`.
+- **Secondary / Draft Button:** Soft Beige (`#D8D1C9`) 1px border over White surface, Charcoal text. Hover fills to `#EFE9E2`.
+- **Luxury Action (Reorder / Approve Batch):** Warm Gold (`#B77E39`) fill, Charcoal text, high-contrast presence for critical fulfillment checkpoints.
+
+### Input Fields & Selectors
+- **Form Controls:** Set against Pure White with a 1px `#D8D1C9` border. Focus transitions to a 1px Deep Burgundy border with a zero-spread ambient ring (`rgba(83, 2, 1, 0.12)`).
+- **Unit Quantity Adjusters:** Step-input components (for bulk kilograms and wheel units) flank an inner numeric field with Burgundy hairline buttons, maintaining clean RTL alignment (plus on the left, minus on the right).
+
+### Product & Stock Cards
+- Pure White background, bordered with `#D8D1C9`. Contains product Persian classification (e.g., Ù¶a¶ã6,H6mŠ}‹˜]¸ÍŠÍŠ}˜m˜‚»=»b˜]Š}˜}˜r’ÂVævÆ—6‚4µR6öFRÂÆ—fRFV×W&GW&R7F÷&vR&FvW2Â–çfVçF÷'’F‡&W6†öÆG2†–â7Fö6²ò&6¶÷&FW"’ÂæB–ÖÖVF–FRVçF—G’7FWW"6öçG&öÇ2à¢ÒvFW&Ö&²×W'6æB†f’÷6—G’6WBFòã67&÷72F†RF÷ÖÆVgB&6¶w&÷VæBöb6FVv÷'’fVGW&RF–ÆW2à ¢222&FvW2b6†—0¢Ò¢¤vVBò&VÖ—VÒVÆ—G“¢¢¢v&ÒvöÆB&6¶w&÷VæBB"R÷6—G’v—F‚6öÆ–B4#stS3–FW‡BæB†—&Æ–æR&÷&FW"à¢Ò¢¤'&æ6‚Æöv—7F–727FGW2…&ö6W76–ærÂ–âG&ç6—BÂFVÆ—fW&VB“¢¢¢'W&wVæG’×F–çFVB7FGW2Fw2f÷"FÖ–æ—7G&F—fR&÷fÇ3²×WFVB6†&6öÂö7&VÒ&FvW2f÷"&÷WF–æRÆöv—7F–6Â6öæf—&ÖF–öç2à ¢222F&ÆW2b7WÇ’Æ—7G0¢ÒFVç6RF'VÆ"&÷w2v—F‚C‡‚&6VÆ–æR†V–v‡BâÇFW&æF–ær&÷w2WF–Æ—¦Rv&Ò—f÷'’†4ctcTc’7G&—–ærâ6öÇVÖâ6W&F÷'2W6R‚4TdS”S&â†÷fW"7FFW2†–v†Æ–v‡BVçF—&R&÷w2–â6ögB7&VÒv—F‚âæ6†÷&VB'W&wVæG’66VçB7G&—RöâF†R&–v‡BVFvR

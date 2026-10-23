@@ -1,0 +1,206 @@
+---
+name: Atelier Provenance
+colors:
+  surface: '#faf9f7'
+  surface-dim: '#dadad8'
+  surface-bright: '#faf9f7'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f4f3f1'
+  surface-container: '#efeeec'
+  surface-container-high: '#e9e8e6'
+  surface-container-highest: '#e3e2e0'
+  on-surface: '#1a1c1b'
+  on-surface-variant: '#57423f'
+  inverse-surface: '#2f3130'
+  inverse-on-surface: '#f1f1ef'
+  outline: '#8a716e'
+  outline-variant: '#ddc0bb'
+  surface-tint: '#a23d30'
+  primary: '#2c0000'
+  on-primary: '#ffffff'
+  primary-container: '#530201'
+  on-primary-container: '#de6959'
+  inverse-primary: '#ffb4a8'
+  secondary: '#5f5e5e'
+  on-secondary: '#ffffff'
+  secondary-container: '#e4e2e1'
+  on-secondary-container: '#656464'
+  tertiary: '#101111'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#252626'
+  on-tertiary-container: '#8d8d8d'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad4'
+  primary-fixed-dim: '#ffb4a8'
+  on-primary-fixed: '#410000'
+  on-primary-fixed-variant: '#83261b'
+  secondary-fixed: '#e4e2e1'
+  secondary-fixed-dim: '#c8c6c5'
+  on-secondary-fixed: '#1b1c1c'
+  on-secondary-fixed-variant: '#474746'
+  tertiary-fixed: '#e3e2e2'
+  tertiary-fixed-dim: '#c7c6c6'
+  on-tertiary-fixed: '#1b1c1c'
+  on-tertiary-fixed-variant: '#464747'
+  background: '#faf9f7'
+  on-background: '#1a1c1b'
+  surface-variant: '#e3e2e0'
+typography:
+  display-hero:
+    fontFamily: Hanken Grotesk
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 56px
+    letterSpacing: -0.03em
+  display-hero-mobile:
+    fontFamily: Hanken Grotesk
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Hanken Grotesk
+    fontSize: 32px
+    fontWeight: '500'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Hanken Grotesk
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: 32px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Hanken Grotesk
+    fontSize: 22px
+    fontWeight: '500'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Hanken Grotesk
+    fontSize: 17px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: -0.005em
+  body-lg:
+    fontFamily: Hanken Grotesk
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Hanken Grotesk
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Hanken Grotesk
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  code-mono:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-caps:
+    fontFamily: Hanken Grotesk
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-desktop: 1.5rem
+  margin: 1rem
+  margin-desktop: 2.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+The design system establishes an architectural, gallery-grade procurement interface for high-end hospitality operators, master butchers, and artisan cheesemongers. Drawing inspiration from the disciplined utilitarianism of Linear, the technical elegance of Stripe, and the spatial precision of Apple, the aesthetic treats raw culinary luxury as museum artifacts.
+
+The tone is authoritative, understated, and uncompromisingly modern. Generous, unhurried negative space frames wholesale volumes and provenance data with the same gravity as fine timepieces. High contrast typography, whisper-thin linear dividers, and a strict lack of decorative clutter replace traditional e-commerce tropes with institutional clarity and quiet confidence.
+
+## Colors
+The color architecture relies on a luminous, warm neutral foundation with high-contrast text and a singular, deep burgundy accent.
+
+- **Primary Accent (`#530201`):** A dense, aged wine burgundy representing artisanal curing, heritage bloodlines, and culinary tradition. Used sparingly for critical CTAs, active operational indicators, and select status badges.
+- **Surface Canvas (`#F8F7F5`):** A warm alabaster canvas that removes digital sterility while maintaining optical cleanliness.
+- **Surface Card/Elevated (`#FFFFFF`):** Crisp pure white layers reserved for active work modules, ordering sheets, and item focal points.
+- **Surface Subdued (`#F1EFEC`):** A tinted neutral surface for table headers, inactive rows, hover states, and structural sidebars.
+- **Borders & Dividers (`#E8E6E3`):** Calibrated neutral borders providing crisp architectural definition without visual weight.
+- **Text & Content Hierarchy:** Primary text sits at `#242424` (deep carbon) for pristine legibility, with supporting metadata, SKUs, and secondary labels set to `#777777` (muted basalt).
+
+## Typography
+Typographic discipline pairs the hyper-clean, Swiss-influenced proportions of **Hanken Grotesk** for Latin interfaces with **Vazirmatn** for all Persian RTL localizations. For batch numbers, refrigeration logs, weight measures, and wholesale invoice numbers, **JetBrains Mono** injects precision instrumentation.
+
+### Rules & Fallbacks
+- For Persian text strings, assign `font-family: 'Vazirmatn', 'Hanken Grotesk', sans-serif;`. Ensure Vazirmatn utilizes standard tabular numerals (`tnum`) across inventory ledgers.
+- Keep headlines tight and restrained; avoid oversized hero titles within core transactional workflows.
+- `label-caps` must be transformed to uppercase in Latin layouts, but retained in standard weight and baseline in Persian RTL view.
+
+## Layout & Spacing
+The layout adheres to a strict 8px spatial grid, relying on a 12-column fluid framework with a constrained max-width of 1440px on high-resolution displays to preserve compositional tension.
+
+### Responsive Breakpoints
+- **Mobile (<768px):** 4-column layout, 16px outer margins, 16px gutters. Complex procurement tables collapse into single-column architectural data blocks.
+- **Tablet (768px–1024px):** 8-column layout, 24px outer margins, 20px gutters. Collapsible contextual navigation.
+- **Desktop (>1024px):** 12-column layout, 40px outer margins, 24px gutters. Dual-pane inspection: persistent category or batch sidebar coupled with an expansive data matrix.
+
+Layout density is managed strictly via gap and padding tokens rather than heavy divider ornaments. Maintain intentional white-space buffers around high-value inventory items.
+
+## Elevation & Depth
+In pursuit of a pristine architectural plane, traditional drop shadows are strictly prohibited. Spatial layering is conveyed exclusively through planar contrast, flat tonal stepping, and hairline structural borders.
+
+- **Planar Tiering:** Base canvas (`#F8F7F5`) sits at ground zero. Structural content containers live on `#FFFFFF`. Secondary control clusters, filter trays, and table header strips use `#F1EFEC`.
+- **Architectural Rules:** All boundary demarcation is executed with a hairline 1px border (`#E8E6E3`). No box shadows or floating cards inside other cards.
+- **Modal & Overlay Elevation:** Modals and flying sheets do not use diffuse blur or ambient spread; they rely on a crisp 1px `#E8E6E3` edge against a 20% opacity neutral wash (`#242424` at `0.20`), preserving crisp structural borders.
+
+## Shapes
+Shapes express precision engineering and structural restraint. Radius is limited to `0.25rem` (4px) for controls, inputs, and chips, with a maximum of `0.5rem` (8px) for primary surface containers. 
+
+Pill shapes are reserved strictly for binary status tags (e.g., "In Curing", "Aged 24 Mo"). High-order structural containers, sheets, and image frames retain crisp, geometric corners with subtle 4px corner radii, evoking architectural blueprints and specimen vitrines.
+
+## Components
+
+### Buttons
+- **Primary:** Solid `#530201` background, `#FFFFFF` text, 4px border-radius, zero shadow. Height 36px, horizontal padding 16px. Hover state shifts to `#400101`.
+- **Secondary / Ghost:** `#FFFFFF` background, 1px border `#E8E6E3`, `#242424` text. Hover shifts background to `#F1EFEC`.
+- **Destructive / Alert:** Transparent background, 1px border `#530201`, `#530201` text.
+
+### Inputs & Selects
+- Height 36px, background `#FFFFFF`, border 1px solid `#E8E6E3`, radius 4px.
+- Focus state: border color switches directly to `#530201` without an exterior glow or ring offset.
+- Typography: Body-MD (`14px`), placeholder colored in `#777777`. RTL inputs align text cleanly to the right with mirrored padding.
+
+### Data Tables & Specimen Lists
+- Direct cell dividers: horizontal 1px hairline border `#E8E6E3`. No vertical internal gridlines.
+- Header row: `#F1EFEC` background, label-caps typography, 32px height.
+- Row hover: subtle background transition to `#F8F7F5`.
+
+### Chips & Metas
+- Height 22px, border-radius 2px or pill (9999px) for lifecycle status.
+- Standard metadata: `#F1EFEC` background, `#242424` text, no border.
+- Premium cut tag: `#530201` text, `#530201` tint at 8% background.
+
+### Cards & Surfaces
+- Avoid nested cards. All grouping relies on single-level white canvases (`#FFFFFF`) framed by 1px `#E8E6E3` directly on the `#F8F7F5` background.
+- Internal card division is managed solely through whitespace (`space-md`) or a single horizontal line.

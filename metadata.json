@@ -1,0 +1,6 @@
+{
+  "name": "سامانه تأمین اختصاصی شعب",
+  "description": "سامانه B2B مدیریت و سفارش اقلام پروتئینی، لبنیات و مواد اولیه شعب رستوران با طراحی اختصاصی موبایل‌فرست و هویت برند.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
