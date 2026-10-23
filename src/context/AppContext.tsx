@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { Product, CartItem, Order, BranchProfile, ScreenView } from '../types';
+import { Product, CartItem, Order, BranchProfile, ScreenView, UserRole } from '../types';
 import { PRODUCTS, INITIAL_CART_ITEMS, INITIAL_ORDERS, INITIAL_BRANCH } from '../data/mockData';
 
 interface AppContextType {
   currentView: ScreenView;
   setCurrentView: (view: ScreenView) => void;
+  userRole: UserRole;
+  setUserRole: (role: UserRole) => void;
   isLoggedIn: boolean;
   setIsLoggedIn: (logged: boolean) => void;
   cartItems: CartItem[];
@@ -46,6 +48,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentView, setCurrentView] = useState<ScreenView>('dashboard');
+  const [userRole, setUserRole] = useState<UserRole>('branch');
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   const [cartItems, setCartItems] = useState<CartItem[]>(INITIAL_CART_ITEMS);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
@@ -185,6 +188,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       value={{
         currentView,
         setCurrentView,
+        userRole,
+        setUserRole,
         isLoggedIn,
         setIsLoggedIn,
         cartItems,

@@ -13,6 +13,8 @@ import { PaymentFailedView } from './components/PaymentFailedView';
 import { BranchInfoView } from './components/BranchInfoView';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { LoginView } from './components/LoginView';
+import { OwnerLoginView } from './components/OwnerLoginView';
+import { OwnerOrdersView } from './components/OwnerOrdersView';
 
 const AppContent: React.FC = () => {
   const {
@@ -21,6 +23,15 @@ const AppContent: React.FC = () => {
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useApp();
+
+  // Owner dedicated screens
+  if (currentView === 'owner-login') {
+    return <OwnerLoginView />;
+  }
+
+  if (currentView === 'owner-orders') {
+    return <OwnerOrdersView />;
+  }
 
   // If user is logged out or visiting login
   if (!isLoggedIn || currentView === 'login') {

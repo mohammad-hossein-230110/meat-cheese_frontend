@@ -8,7 +8,11 @@ export type ScreenView =
   | 'payment-gateway'
   | 'payment-success'
   | 'payment-failed'
-  | 'branch-info';
+  | 'branch-info'
+  | 'owner-login'
+  | 'owner-orders';
+
+export type UserRole = 'branch' | 'owner';
 
 export interface Product {
   id: string;

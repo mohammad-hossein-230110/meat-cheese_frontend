@@ -32,6 +32,10 @@ export const Header: React.FC = () => {
         return 'خطای پرداخت';
       case 'branch-info':
         return 'اطلاعات شعبه';
+      case 'owner-orders':
+        return 'سفارش‌های شعب (مدیریت کل)';
+      case 'owner-login':
+        return 'ورود مدیریت مرکزی';
       default:
         return 'سامانه تأمین';
     }

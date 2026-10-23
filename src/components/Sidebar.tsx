@@ -6,6 +6,7 @@ import {
   Building2,
   LogOut,
   X,
+  Shield,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { BrandLogo } from './BrandLogo';
@@ -23,6 +24,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileDrawer = false }) => {
     cartUniqueCount,
     setMobileMenuOpen,
     setIsLoggedIn,
+    setUserRole,
     branch,
   } = useApp();
 
@@ -137,10 +139,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileDrawer = false }) => {
           <p className="text-[10px] text-white/50">مدیر شعبه: {branch.manager}</p>
         </div>
 
+        {/* Switch to Owner / HQ Admin */}
+        <button
+          onClick={() => {
+            setUserRole('owner');
+            setCurrentView('owner-orders');
+            if (isMobileDrawer) setMobileMenuOpen(false);
+          }}
+          className="w-full flex items-center justify-center gap-1.5 py-1.5 text-[11px] text-[#E4C8B5] hover:text-white bg-white/5 hover:bg-white/10 rounded transition-colors border border-white/10"
+        >
+          <Shield size={13} className="text-[#E4C8B5]" />
+          <span>پنل مدیریت کل (مالک / HQ)</span>
+        </button>
+
         {/* Logout */}
         <button
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-1.5 py-1.5 text-[11px] text-white/50 hover:text-white hover:bg-white/5 rounded transition-colors"
+          className="w-full flex items-center justify-center gap-1.5 py-1 text-[11px] text-white/40 hover:text-white hover:bg-white/5 rounded transition-colors"
         >
           <LogOut size={12} />
           <span>خروج از حساب</span>

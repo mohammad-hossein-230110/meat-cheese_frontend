@@ -129,15 +129,24 @@ export const LoginView: React.FC = () => {
                 type="submit"
                 className="w-full h-9 bg-[#530201] hover:bg-[#400101] text-white rounded text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
               >
-                <span>ورود به حساب کاربری</span>
+                <span>ورود به حساب کاربری شعبه</span>
                 <ChevronLeft size={14} />
               </button>
             </form>
           </div>
 
-          {/* Support Link */}
-          <div className="pt-3 border-t border-[#FAF9F7] text-center text-[10px] text-[#777777]">
-            نیاز به راهنمایی دارید؟ پشتیبانی تأمین مرکزی
+          {/* Switch to Owner / HQ Admin */}
+          <div className="pt-3 border-t border-[#FAF9F7] flex flex-col items-center gap-1.5 text-center text-[11px]">
+            <button
+              type="button"
+              onClick={() => setCurrentView('owner-login')}
+              className="text-[#530201] hover:underline font-semibold"
+            >
+              ورود به پنل مدیریت کل (مالک / HQ Admin) ←
+            </button>
+            <span className="text-[10px] text-[#777777]">
+              پشتیبانی تأمین مرکزی: ۰۲۱-۲۲۰۰۱۱۲۲
+            </span>
           </div>
         </div>
       </div>
