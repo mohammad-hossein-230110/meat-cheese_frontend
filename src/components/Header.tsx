@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, ShoppingBag, ChevronLeft } from 'lucide-react';
+import { Menu, ShoppingBag, ChevronLeft, UtensilsCrossed } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { formatPrice } from '../data/mockData';
 import { BrandLogo } from './BrandLogo';
@@ -73,8 +73,19 @@ export const Header: React.FC = () => {
           <span>انبار مرکزی فعال · ارسال روز</span>
         </div>
 
-        {/* Left Zone: Cart Trigger + Manager */}
+        {/* Left Zone: Cart Trigger + Standalone Menu + Manager */}
         <div className="flex items-center gap-2">
+          {/* Standalone Restaurant Menu Link (Separate Section) */}
+          <button
+            onClick={() => setCurrentView('menu')}
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded text-xs bg-[#FAF9F7] hover:bg-[#F1EFEC] text-[#530201] border border-[#E8E6E3] hover:border-[#530201] transition-colors cursor-pointer"
+            title="مشاهده بخش مستقل: منوی دیجیتال مشتریان رستوران"
+          >
+            <UtensilsCrossed size={13} className="text-[#9E7D56]" />
+            <span className="hidden sm:inline">منوی مستقل رستوران</span>
+            <span className="sm:hidden">منو</span>
+          </button>
+
           {/* Cart Pill */}
           <button
             onClick={() => setCurrentView('cart')}

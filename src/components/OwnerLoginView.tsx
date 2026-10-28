@@ -124,14 +124,20 @@ export const OwnerLoginView: React.FC = () => {
             </button>
           </form>
 
-          {/* Switch to Branch Login */}
-          <div className="pt-2 border-t border-[#F1EFEC] text-center">
+          {/* Switch to Branch Login / Standalone Menu */}
+          <div className="pt-2 border-t border-[#F1EFEC] text-center space-y-1.5">
             <button
               onClick={handleSwitchToBranchLogin}
               className="text-[11px] text-[#530201] hover:underline flex items-center justify-center gap-1.5 mx-auto font-medium"
             >
               <Building2 size={13} />
               <span>ورود به عنوان مدیر شعبه (فرمانیه)</span>
+            </button>
+            <button
+              onClick={() => setCurrentView('menu')}
+              className="text-[11px] text-[#765935] hover:text-[#530201] hover:underline flex items-center justify-center gap-1.5 mx-auto font-medium"
+            >
+              <span>مشاهده بخش مستقل منوی رستوران ←</span>
             </button>
           </div>
         </div>

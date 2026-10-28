@@ -10,7 +10,8 @@ export type ScreenView =
   | 'payment-failed'
   | 'branch-info'
   | 'owner-login'
-  | 'owner-orders';
+  | 'owner-orders'
+  | 'menu';
 
 export type UserRole = 'branch' | 'owner';
 

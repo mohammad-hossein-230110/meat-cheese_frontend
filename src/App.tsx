@@ -15,14 +15,21 @@ import { ProductDetailModal } from './components/ProductDetailModal';
 import { LoginView } from './components/LoginView';
 import { OwnerLoginView } from './components/OwnerLoginView';
 import { OwnerOrdersView } from './components/OwnerOrdersView';
+import { ArtisanMenuView } from './components/menu/ArtisanMenuView';
 
 const AppContent: React.FC = () => {
   const {
     currentView,
+    setCurrentView,
     isLoggedIn,
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useApp();
+
+  // Standalone Menu section (completely isolated from owner & branch portal)
+  if (currentView === 'menu') {
+    return <ArtisanMenuView onSwitchToB2B={() => setCurrentView('catalog')} />;
+  }
 
   // Owner dedicated screens
   if (currentView === 'owner-login') {

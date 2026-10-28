@@ -46,8 +46,24 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
+const getInitialView = (): ScreenView => {
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('view') === 'menu' || window.location.hash === '#menu') {
+      return 'menu';
+    }
+    if (params.get('view') === 'dashboard') {
+      return 'dashboard';
+    }
+    if (params.get('view') === 'owner-login') {
+      return 'owner-login';
+    }
+  }
+  return 'catalog';
+};
+
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentView, setCurrentView] = useState<ScreenView>('dashboard');
+  const [currentView, setCurrentView] = useState<ScreenView>(getInitialView);
   const [userRole, setUserRole] = useState<UserRole>('branch');
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   const [cartItems, setCartItems] = useState<CartItem[]>(INITIAL_CART_ITEMS);

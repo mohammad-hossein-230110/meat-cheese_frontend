@@ -144,6 +144,13 @@ export const LoginView: React.FC = () => {
             >
               ورود به پنل مدیریت کل (مالک / HQ Admin) ←
             </button>
+            <button
+              type="button"
+              onClick={() => setCurrentView('menu')}
+              className="text-[#765935] hover:text-[#530201] hover:underline font-medium text-[11px]"
+            >
+              مشاهده منوی مستقل رستوران (بدون نیاز به ورود) ←
+            </button>
             <span className="text-[10px] text-[#777777]">
               پشتیبانی تأمین مرکزی: ۰۲۱-۲۲۰۰۱۱۲۲
             </span>

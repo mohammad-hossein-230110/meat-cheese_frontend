@@ -1,6 +1,6 @@
 {
-  "name": "سامانه تأمین اختصاصی شعب",
-  "description": "سامانه B2B مدیریت و سفارش اقلام پروتئینی، لبنیات و مواد اولیه شعب رستوران با طراحی اختصاصی موبایل‌فرست و هویت برند.",
+  "name": "منوی رستوران | MEAT & CHEESE",
+  "description": "منوی دیجیتال رستوران میت اند چیز - طعم‌های اصیل با بهترین مواد اولیه و پخت آرتیزان.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

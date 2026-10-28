@@ -18,6 +18,7 @@ import {
   ArrowRightLeft,
   X,
   ExternalLink,
+  UtensilsCrossed,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { BrandLogo } from './BrandLogo';
@@ -363,6 +364,15 @@ export const OwnerOrdersView: React.FC = () => {
             >
               <ArrowRightLeft size={12} />
               <span className="hidden sm:inline">مشاهده پنل شعبه</span>
+            </button>
+
+            <button
+              onClick={() => setCurrentView('menu')}
+              className="flex items-center gap-1 px-2.5 py-1 text-[11px] bg-[#FAF9F7] hover:bg-[#E9E8E6] text-[#765935] border border-[#E8E6E3] rounded transition-colors"
+              title="مشاهده بخش مستقل منوی رستوران"
+            >
+              <UtensilsCrossed size={12} />
+              <span className="hidden sm:inline">منوی مستقل رستوران</span>
             </button>
 
             <button

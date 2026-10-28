@@ -1,0 +1,759 @@
+<!-- منوی رستوران | MEAT & CHEESE (موبایل گلس‌مورفیسم لوکس) -->
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>منوی رستوران | MEAT &amp; CHEESE</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#530201',
+              hover: '#690504',
+              glow: 'rgba(83, 2, 1, 0.45)'
+            },
+            darkSurface: 'rgba(26, 20, 18, 0.82)',
+            glassBorder: 'rgba(255, 255, 255, 0.12)',
+            warmMuted: '#a89f91',
+            accentGold: '#c8a97e'
+          },
+          fontFamily: {
+            vazir: ['Vazirmatn', 'system-ui', '-apple-system', 'sans-serif'],
+            serifBrand: ['Cinzel', 'Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Vazirmatn & Luxury Serif for Brandmark -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Core Layout & Custom Glassmorphism Styles -->
+<style data-purpose="custom-glass">
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #120e0d;
+      color: #f5f5f5;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background with photography underlay */
+    .bg-restaurant-backdrop {
+      background-image: 
+        radial-gradient(circle at 50% 15%, rgba(83, 2, 1, 0.22) 0%, transparent 60%),
+        linear-gradient(to bottom, rgba(18, 14, 13, 0.88) 0%, rgba(18, 14, 13, 0.94) 50%, rgba(14, 11, 10, 0.98) 100%),
+        url('https://lh3.googleusercontent.com/aida/AEtjO1VvTYziZkP-iDBfEEl3NKVQKhMO6eOiiHcMWRqiUGuD1lG-5zuZlmFMAwoxzVZjNBJoo_aokcgkAggMYYMB6jVCXHZq9gK51v_LZZ1GvCEf9Zvl-9jx08lNrn7msf0vHMuqmtdLwqrrDJowQ9f3uUXrkLLfm2Oeo-g6FhvRrf_-UcSYCjiwa5X5IqioD5AfLKjshQcvw2_bvD87vTyzueYH0yMAzDNajiEcelUWrIOI');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    /* Glass Panels */
+    .glass-navbar {
+      background: rgba(24, 19, 17, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(24, 19, 17, 0.82);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-cart-bar {
+      background: rgba(22, 17, 15, 0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85), 0 0 24px rgba(83, 2, 1, 0.25);
+    }
+
+    /* Hide scrollbar for category horizontal scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-restaurant-backdrop min-h-screen text-stone-100 flex flex-col justify-between antialiased selection:bg-burgundy selection:text-white pb-32">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 glass-navbar px-4 py-3 transition-all duration-300">
+<div class="max-w-[420px] mx-auto flex items-center justify-between">
+<!-- Cart Icon with badge counter -->
+<button aria-label="سبد خرید" class="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/5 border border-white/10 active:scale-95 transition-transform" type="button">
+<svg class="w-5 h-5 text-stone-200" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<!-- Counter Badge -->
+<span class="absolute -top-1 -right-1 w-5 h-5 bg-burgundy border border-white/20 text-[11px] font-bold text-white rounded-full flex items-center justify-center shadow-md">
+          ۳
+        </span>
+</button>
+<!-- Center Logo & Branding -->
+<div class="flex items-center gap-2">
+<span class="font-serifBrand text-stone-100 font-bold tracking-wider text-[15px] pt-0.5">
+          MEAT &amp; CHEESE
+        </span>
+<span class="bg-burgundy text-[10px] font-bold text-white px-1.5 py-0.5 rounded tracking-wide border border-white/20">
+          M&amp;C
+        </span>
+</div>
+<!-- Navigation / Menu Drawer Trigger -->
+<button aria-label="منوی اصلی" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 border border-white/10 text-stone-200 active:scale-95 transition-transform" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroIntroSection -->
+<section class="pt-6 pb-4 px-4 text-center max-w-[420px] mx-auto w-full">
+<!-- Premium Badge -->
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill text-[11px] font-medium tracking-wide text-stone-300 uppercase shadow-sm mb-3">
+<span class="text-amber-400 text-xs">★</span>
+<span>PREMIUM DINING MENU</span>
+</div>
+<!-- Main Title -->
+<h1 class="text-3xl font-extrabold text-white tracking-tight mb-2">
+      منو
+    </h1>
+<!-- Subtitle -->
+<p class="text-warmMuted text-xs font-normal">
+      طعم‌های اصیل، با بهترین مواد اولیه
+    </p>
+</section>
+<!-- END: HeroIntroSection -->
+<!-- BEGIN: CategoryNavigation -->
+<nav class="w-full max-w-[420px] mx-auto px-4 mb-6">
+<div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar py-1">
+<!-- Active Item: برگرها -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-burgundy text-white text-xs font-semibold shadow-lg shadow-burgundy/40 border border-burgundy/60 transition-transform active:scale-95">
+        برگرها
+      </button>
+<!-- Category Item: ساندویچ‌ها -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-pill text-stone-300 hover:text-white text-xs font-medium transition-all active:scale-95">
+        ساندویچ‌ها
+      </button>
+<!-- Category Item: سالادها -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-pill text-stone-300 hover:text-white text-xs font-medium transition-all active:scale-95">
+        سالادها
+      </button>
+<!-- Category Item: نوشیدنی‌ها -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-pill text-stone-300 hover:text-white text-xs font-medium transition-all active:scale-95">
+        نوشیدنی‌ها
+      </button>
+<!-- Category Item: پیش‌غذا و ساید -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-pill text-stone-300 hover:text-white text-xs font-medium transition-all active:scale-95">
+        پیش‌غذا و ساید
+      </button>
+</div>
+</nav>
+<!-- END: CategoryNavigation -->
+<!-- BEGIN: MenuProductList -->
+<main class="w-full max-w-[420px] mx-auto px-4 space-y-6">
+<!-- Card 1: Smash Burger -->
+<article class="rounded-2xl overflow-hidden glass-card transition-all duration-300" data-purpose="product-card">
+<!-- Dish Image with Overlay Badge -->
+<div class="relative w-full h-52 bg-stone-900 overflow-hidden">
+<img alt="برگر ۲۰۰ گرمی اسمش" class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UvdibDY7h0UlbH0PJOaAX6Q_oZLG4WqLULGTEqMHXJQzhslA_Pf94LsZmzXc0mwH5wSAquY_id9F8GA66rfgksxB8k3fwkayegUVpY5V7jBPyvfRldvS7bfazxxnHYtyPvEq1j7TrafPOgWqG6uBFek-i4wTk6KXQ6elO7VmTC9dhiLfFuVxGgmSVoSYwlP6fpFnaU-M6wGCvyskgTxwzYQw-3R7RYPDNxOpAIw-tY"/>
+<!-- Top-Right Badge (RTL First Side) -->
+<span class="absolute top-3.5 right-3.5 px-3 py-1 rounded-md text-[11px] font-semibold text-white bg-burgundy/90 backdrop-blur-md border border-white/20 shadow-md">
+          امضای سرآشپز
+        </span>
+</div>
+<!-- Card Information -->
+<div class="p-4 pt-3.5 flex flex-col justify-between">
+<div>
+<h2 class="text-base font-bold text-white mb-1.5 tracking-tight">
+            برگر ۲۰۰ گرمی اسمش
+          </h2>
+<p class="text-xs text-stone-400 font-light leading-relaxed line-clamp-2">
+            گوشت گوساله گریل‌شده، پنیر چدار دست‌ساز ورام، پیاز کاراملی شده و سس ویژه در نان بریوش تازه.
+          </p>
+</div>
+<!-- Footer Info: Price & Add Button -->
+<div class="flex items-center justify-between pt-4 mt-3 border-t border-white/10">
+<!-- Price Box -->
+<div class="flex flex-col">
+<span class="text-[10px] text-warmMuted mb-0.5">قیمت نهایی</span>
+<span class="text-sm font-bold text-stone-100 tracking-tight">
+              ۲۴۵,۰۰۰ <span class="text-[11px] font-normal text-stone-400">تومان</span>
+</span>
+</div>
+<!-- Add Button -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-burgundy hover:bg-burgundy-hover text-white text-xs font-semibold shadow-md shadow-burgundy/30 active:scale-95 transition-all" type="button">
+<span>افزودن</span>
+<span class="text-base leading-none font-light">+</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Pastrami Sandwich -->
+<article class="rounded-2xl overflow-hidden glass-card transition-all duration-300" data-purpose="product-card">
+<!-- Dish Image with Overlay Badge -->
+<div class="relative w-full h-52 bg-stone-900 overflow-hidden">
+<img alt="ساندویچ پاسترامی نیویورکی" class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XihaTHRvDV9WcmjmrjhBZ0m5KIIphPHmWXrypXXlqzmHk1L9jKPIpH2a8A5g-RKRvVU6v5UTfnAiiLm44i6aH-Ap9oLzwXeufTi-hVzB-zqehj9ABxmKnwEGoGU2Ji-j_AOJa-eXW6t6kiqZzDrUFvT1u_YufBVC58YuakNARza5GTQoFkfjJRPlE2xAFarAiEO1HDDX3DaccrcIUrvFY1d7Pff2-MhzRao1ba3Js"/>
+<!-- Top-Right Badge -->
+<span class="absolute top-3.5 right-3.5 px-3 py-1 rounded-md text-[11px] font-semibold text-stone-200 bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
+          آرتیزان
+        </span>
+</div>
+<!-- Card Information -->
+<div class="p-4 pt-3.5 flex flex-col justify-between">
+<div>
+<h2 class="text-base font-bold text-white mb-1.5 tracking-tight">
+            ساندویچ پاسترامی نیویورکی
+          </h2>
+<p class="text-xs text-stone-400 font-light leading-relaxed line-clamp-2">
+            لایه‌های پاسترامی دودی دست‌ساز، پنیر سوئیسی آب‌شده، خردل دیژون و خیارشور تخمیری در نان خمیرترش.
+          </p>
+</div>
+<!-- Footer Info: Price & Add Button -->
+<div class="flex items-center justify-between pt-4 mt-3 border-t border-white/10">
+<!-- Price Box -->
+<div class="flex flex-col">
+<span class="text-[10px] text-warmMuted mb-0.5">قیمت نهایی</span>
+<span class="text-sm font-bold text-stone-100 tracking-tight">
+              ۲۹۰,۰۰۰ <span class="text-[11px] font-normal text-stone-400">تومان</span>
+</span>
+</div>
+<!-- Add Button -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-burgundy hover:bg-burgundy-hover text-white text-xs font-semibold shadow-md shadow-burgundy/30 active:scale-95 transition-all" type="button">
+<span>افزودن</span>
+<span class="text-base leading-none font-light">+</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Caesar Salad with Steak -->
+<article class="rounded-2xl overflow-hidden glass-card transition-all duration-300" data-purpose="product-card">
+<!-- Dish Image with Overlay Badge -->
+<div class="relative w-full h-52 bg-stone-900 overflow-hidden">
+<img alt="سالاد سزار فیله گریل‌شده" class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W88F5YFuMdkQwbHEH1zQaLRNOYGq3ZhW5ZQf5MI3b5HgfKZyHy_3mP1p9wdIpTzSoT_glJxV7LX7fn8rCZJczxA09DpqJRue1S5Nolzm-oY7URV_aotamNj43IeJOMH2ci0nxyiZFY_f0-i3QPt2g4nQTb_vfIz4SozCdgaNmITmEJlJvBV8JKlCGa8JxapftqOwoyF-bZh0Psu-Z0xD12t6VQO5wIoQ_SX9x-zM0"/>
+<!-- Top-Right Badge -->
+<span class="absolute top-3.5 right-3.5 px-3 py-1 rounded-md text-[11px] font-semibold text-stone-200 bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
+          سبک و پروتئینی
+        </span>
+</div>
+<!-- Card Information -->
+<div class="p-4 pt-3.5 flex flex-col justify-between">
+<div>
+<h2 class="text-base font-bold text-white mb-1.5 tracking-tight">
+            سالاد سزار فیله گریل‌شده
+          </h2>
+<p class="text-xs text-stone-400 font-light leading-relaxed line-clamp-2">
+            کاهو پیچ تازه، فیله گوساله اسلایسی، کروتان سیر، ورقات پنیر پارمزان و سس سزار دست‌ساز سرآشپز.
+          </p>
+</div>
+<!-- Footer Info: Price & Add Button -->
+<div class="flex items-center justify-between pt-4 mt-3 border-t border-white/10">
+<!-- Price Box -->
+<div class="flex flex-col">
+<span class="text-[10px] text-warmMuted mb-0.5">قیمت نهایی</span>
+<span class="text-sm font-bold text-stone-100 tracking-tight">
+              ۱۹۵,۰۰۰ <span class="text-[11px] font-normal text-stone-400">تومان</span>
+</span>
+</div>
+<!-- Add Button -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-burgundy hover:bg-burgundy-hover text-white text-xs font-semibold shadow-md shadow-burgundy/30 active:scale-95 transition-all" type="button">
+<span>افزودن</span>
+<span class="text-base leading-none font-light">+</span>
+</button>
+</div>
+</div>
+</article>
+</main>
+<!-- END: MenuProductList -->
+<!-- BEGIN: BottomStickyCartBar -->
+<aside class="fixed bottom-3 inset-x-0 z-50 px-4 flex justify-center">
+<div class="w-full max-w-[420px] rounded-2xl glass-cart-bar p-3 px-4 flex items-center justify-between gap-3">
+<!-- Cart summary status -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-burgundy/30 border border-burgundy/50 flex items-center justify-center text-white">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-[11px] text-stone-300">
+<span class="font-bold text-white">۳ آیتم</span>
+<span>در سبد سفارش</span>
+</div>
+<div class="text-sm font-extrabold text-white">
+            ۷۳۰,۰۰۰ <span class="text-[10px] font-normal text-stone-400">تومان</span>
+</div>
+</div>
+</div>
+<!-- Action checkout button -->
+<button class="inline-flex items-center gap-1.5 bg-burgundy hover:bg-burgundy-hover text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-lg shadow-burgundy/40 active:scale-95 transition-all">
+<span>تکمیل و پرداخت</span>
+<svg class="w-3.5 h-3.5 transform -scale-x-100" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</aside>
+<!-- END: BottomStickyCartBar -->
+<!-- BEGIN: SiteFooter -->
+<footer class="mt-14 pt-8 pb-10 border-t border-white/10 text-center px-4 max-w-[420px] mx-auto w-full">
+<!-- Brandmark with ruby point -->
+<div class="flex items-center justify-center gap-2 mb-2 font-serifBrand text-stone-200 text-sm tracking-widest font-semibold">
+<span>MEAT &amp; CHEESE RESTAURANT</span>
+<span class="w-1.5 h-1.5 rounded-full bg-burgundy inline-block"></span>
+</div>
+<!-- Subtitle description -->
+<p class="text-[11px] text-stone-400 mb-2 leading-relaxed">
+      تجربه غذایی آرتیزان با استانداردهای بین‌المللی پذیرایی و تأمین تازه
+    </p>
+<!-- Copyright -->
+<p class="text-[10px] text-stone-500 font-light">
+      © ۱۴۰۳ تمامی حقوق محفوظ است
+    </p>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>
+
+<!-- منوی رستوران | MEAT & CHEESE (گلس‌مورفیسم لوکس) -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منوی رستوران | MEAT & CHEESE</title>
+  <!-- Google Fonts: Vazirmatn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            burgundy: '#530201',
+            'burgundy-light': '#6c0807',
+            'burgundy-dark': '#3a0100',
+            'warm-white': '#F8F7F5',
+            'soft-ivory': '#F1ECE6',
+            'charcoal': '#242424',
+            'subtle-gray': '#8e8e93',
+            'glass-bg': 'rgba(25, 23, 23, 0.65)',
+            'glass-panel': 'rgba(18, 16, 16, 0.72)',
+            'glass-border': 'rgba(255, 255, 255, 0.12)',
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            'card': '0 12px 30px -10px rgba(0, 0, 0, 0.5)',
+          },
+          backdropBlur: {
+            'glass': '20px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Base Reset & Utilities */
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #0d0b0b;
+      color: #F8F7F5;
+      overflow-x: hidden;
+    }
+    
+    /* Custom Scrollbar for horizontal tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Seamless Card Structure - Absolutely No Rounded Inner Corners */
+    .unified-glass-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(26, 22, 22, 0.68);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .unified-glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Flat top edge for the info section immediately connected with the image */
+    .card-info-flat-top {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(28, 24, 24, 0.85) 0%, rgba(18, 15, 15, 0.92) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+<body class="min-h-screen relative flex flex-col justify-between selection:bg-[#530201] selection:text-white">
+
+  <!-- Background Ambience with Soft Atmospheric Warm Lighting -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuASDnHEbGfEuX9jnYI_MD4hx84yy6pLoqe-nKGYpY0SKsOR0CT809xXXFmZrDZ6pZaKbdunulb9oSL60ICmIN2oohUsS8dUUgSoFm23vAjkYr5GTJ6ff8KSWDELMvPBHkSJcxieLTzF_kHC81W1dtt_mcNW6uZQm97BIvdemb7aJ28Eom0yfNc-XszMr-GNSoU_TRPwokjYokv1BrB90ekO5sfuivfp_Pvf7viT3ns" alt="Atmospheric Steakhouse" class="w-full h-full object-cover object-center filter blur-md scale-105 opacity-35" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0e0c0c]/85 via-[#120e0e]/80 to-[#0a0808]/95"></div>
+    <!-- Soft warm radial glow -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#530201]/15 rounded-full blur-[120px]"></div>
+  </div>
+
+  <!-- Main Container (Mobile-first at 390px default, responsive up to desktop 1280px) -->
+  <div class="relative z-10 w-full max-w-[1240px] mx-auto min-h-screen flex flex-col px-4 sm:px-6 lg:px-8">
+
+    <!-- Top Navigation Bar (Slim Frosted Glass) -->
+    <header class="sticky top-3 z-50 mt-3 w-full">
+      <nav class="w-full rounded-2xl bg-[#1b1717]/70 backdrop-blur-xl border border-white/10 px-4 py-3 flex items-center justify-between shadow-glass transition-all">
+        
+        <!-- Logo Wordmark -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-[#530201] flex items-center justify-center text-white font-bold text-xs tracking-wider shadow-md">
+            M&C
+          </div>
+          <span class="font-serif tracking-widest text-base sm:text-lg font-bold text-white group-hover:text-amber-100 transition-colors uppercase">
+            MEAT & CHEESE
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links (Hidden on small mobile) -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#" class="px-3.5 py-1.5 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all">صفحه اصلی</a>
+          <a href="#" class="px-4 py-1.5 rounded-lg text-sm font-semibold bg-[#530201] text-white shadow-md">منو</a>
+          <a href="#" class="px-3.5 py-1.5 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all">درباره ما</a>
+          <a href="#" class="px-3.5 py-1.5 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all">گالری</a>
+          <a href="#" class="px-3.5 py-1.5 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all">تماس با ما</a>
+        </div>
+
+        <!-- Right Side: Cart Quick Button -->
+        <div class="flex items-center gap-2.5">
+          <button id="cartBtn" class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all">
+            <svg class="w-5 h-5 text-warm-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="cartCount" class="absolute -top-1 -right-1 w-5 h-5 bg-[#530201] text-white text-[11px] font-bold rounded-full flex items-center justify-center border border-white/20 shadow-sm">
+              ۳
+            </span>
+          </button>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- Menu Header (Centered, Clean & Luxurious) -->
+    <section class="mt-8 mb-6 sm:mt-12 sm:mb-8 text-center max-w-lg mx-auto">
+      <span class="inline-block text-xs uppercase tracking-widest text-amber-200/80 bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-3 backdrop-blur-sm">
+        Premium Dining Menu
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+        منو
+      </h1>
+      <p class="mt-2 text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+        طعم‌های اصیل، با بهترین مواد اولیه
+      </p>
+    </section>
+
+    <!-- Menu Categories (Segmented Glass Tabs - Horizontally Scrollable on Mobile) -->
+    <section class="mb-8 w-full">
+      <div class="flex items-center justify-start md:justify-center overflow-x-auto no-scrollbar py-1 gap-2 sm:gap-3 px-1">
+        <!-- Selected Category Tab -->
+        <button onclick="switchCategory('burgers', this)" class="category-btn whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#530201] text-white shadow-lg border border-white/15">
+          برگرها
+        </button>
+
+        <button onclick="switchCategory('sandwiches', this)" class="category-btn whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white border border-white/10 backdrop-blur-md">
+          ساندویچ‌ها
+        </button>
+
+        <button onclick="switchCategory('salads', this)" class="category-btn whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white border border-white/10 backdrop-blur-md">
+          سالادها
+        </button>
+
+        <button onclick="switchCategory('drinks', this)" class="category-btn whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white border border-white/10 backdrop-blur-md">
+          نوشیدنی‌ها
+        </button>
+
+        <button onclick="switchCategory('appetizers', this)" class="category-btn whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white border border-white/10 backdrop-blur-md">
+          پیش‌غذا و ساید
+        </button>
+      </div>
+    </section>
+
+    <!-- MENU ITEM CARDS SECTION -->
+    <!-- Mobile: 1 Column (390px friendly) | Tablet: 2 Columns | Desktop: 3 Columns -->
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 pb-20">
+
+      <!-- CARD 1: برگر ۲۰۰ گرمی دست‌ساز -->
+      <article class="unified-glass-card group">
+        <!-- TOP: Product Image (Clipped by outer card corners) -->
+        <div class="relative w-full aspect-[4/3] overflow-hidden bg-neutral-900/60">
+          <img 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2GvEX3Tv2SA8C6zpfxBdkWFbdYBxN2NZe3SwPFb35TqRVMyFGfAf6mxmYEow0m_jAx_4yTJ8HM5ODYy7EpMLKip12LWhDaaq1ocwDPOZJcw8faUHy71kelmQwiE6l0Sd587tCdPbMS7cl1CNWq2Ks-8nDbZDYc7nHqwAlcTRX9wK67IkZiWmDOyUf_3buulJxfQmbi__WDrkLcP3eXxnWsB2T4hsBiX1ifoTlQw" 
+            alt="برگر ۲۰۰ گرمی اسمش" 
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-medium tracking-wide bg-[#530201]/90 text-amber-100 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/20">
+            امضای سرآشپز
+          </span>
+        </div>
+
+        <!-- BOTTOM: Frosted Glass Information Panel (FLAT TOP EDGE - Absolutely NO top rounded corners) -->
+        <div class="card-info-flat-top flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                برگر ۲۰۰ گرمی اسمش
+              </h2>
+            </div>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed font-light line-clamp-2">
+              گوشت گوساله گریل‌شده، پنیر چدار دست‌ساز ورام، پیاز کاراملی شده و سس ویژه در نان بریوش تازه.
+            </p>
+          </div>
+
+          <div class="mt-5 pt-3.5 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-neutral-400 block">قیمت نهایی</span>
+              <span class="text-base sm:text-lg font-bold text-white tracking-wide">
+                ۲۴۵,۰۰۰ <span class="text-xs font-normal text-neutral-300">تومان</span>
+              </span>
+            </div>
+
+            <button onclick="addToCart('برگر ۲۰۰ گرمی اسمش', this)" class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#530201] hover:bg-[#6c0807] active:scale-95 text-white text-xs sm:text-sm font-semibold transition-all shadow-md border border-white/15">
+              <span>افزودن</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2: ساندویچ پاسترامی آرتیزان -->
+      <article class="unified-glass-card group">
+        <!-- TOP: Product Image -->
+        <div class="relative w-full aspect-[4/3] overflow-hidden bg-neutral-900/60">
+          <img 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5bO6eQgRnSrntozVVClTWEZpO8Ec33Lv4f_G9ruKXGNrSOHTrL7rS--_BbPJZr4mU_Qjd-66An_DQWg2QpxH97E2g2F16V2c7D50dB-2KIBxKk5fqqvoQa7geuob2HPiJyln36CqYggT-YdVfsdepExK_3QrgH2g9xhZzaTX_Tqcx1bZk7pcnpDlRAKdXyFFbJxBLtTr7hKEVtxKmbkD9sJstMY3rEQmN9Ald48" 
+            alt="ساندویچ پاسترامی ویژه" 
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-medium tracking-wide bg-neutral-900/80 text-neutral-200 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/15">
+            آرتیزان
+          </span>
+        </div>
+
+        <!-- BOTTOM: Frosted Glass Information Panel -->
+        <div class="card-info-flat-top flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                ساندویچ پاسترامی نیویورکی
+              </h2>
+            </div>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed font-light line-clamp-2">
+              لایه‌های پاسترامی دودی دست‌ساز، پنیر سوئیسی آب‌شده، خردل دیژون و خیارشور تخمیری در نان خمیرترش.
+            </p>
+          </div>
+
+          <div class="mt-5 pt-3.5 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-neutral-400 block">قیمت نهایی</span>
+              <span class="text-base sm:text-lg font-bold text-white tracking-wide">
+                ۲۹۰,۰۰۰ <span class="text-xs font-normal text-neutral-300">تومان</span>
+              </span>
+            </div>
+
+            <button onclick="addToCart('ساندویچ پاسترامی نیویورکی', this)" class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#530201] hover:bg-[#6c0807] active:scale-95 text-white text-xs sm:text-sm font-semibold transition-all shadow-md border border-white/15">
+              <span>افزودن</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3: سالاد سزار استیک پریمیوم -->
+      <article class="unified-glass-card group">
+        <!-- TOP: Product Image -->
+        <div class="relative w-full aspect-[4/3] overflow-hidden bg-neutral-900/60">
+          <img 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4mn_zDdPrc-eaKoJj73Jk_GLFHp0N6aGvVaA6gHWUv4TyXyT6pBEzNiVZ81tgMroCSqWJPvzLEEj-nUJBB4rWQ4fmqNpbb_7uTjYvmqUoyBfV3pEAPnimuFGJbkIE9dywXqKwKwI-PiUo3JuzGUeRP8iSbJ6frCAmqrcpBhp731-cYSk8PMN48VgGzqun0LMFvAEBu1akFoq-c0zmROFslUDn4k2yx1r51NGMmyo" 
+            alt="سالاد سزار استیک" 
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-medium tracking-wide bg-neutral-900/80 text-neutral-200 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/15">
+            سبک و پروتئینی
+          </span>
+        </div>
+
+        <!-- BOTTOM: Frosted Glass Information Panel -->
+        <div class="card-info-flat-top flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                سالاد سزار فیله گریل‌شده
+              </h2>
+            </div>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed font-light line-clamp-2">
+              کاهو پیچ تازه، فیله گوساله اسلایسی، کروتان سیر، ورقات پنیر پارمزان و سس سزار دست‌ساز سرآشپز.
+            </p>
+          </div>
+
+          <div class="mt-5 pt-3.5 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-neutral-400 block">قیمت نهایی</span>
+              <span class="text-base sm:text-lg font-bold text-white tracking-wide">
+                ۱۹۵,۰۰۰ <span class="text-xs font-normal text-neutral-300">تومان</span>
+              </span>
+            </div>
+
+            <button onclick="addToCart('سالاد سزار فیله گریل‌شده', this)" class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#530201] hover:bg-[#6c0807] active:scale-95 text-white text-xs sm:text-sm font-semibold transition-all shadow-md border border-white/15">
+              <span>افزودن</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- Mobile Bottom Quick Bar for Cart and Reservation -->
+    <div class="fixed bottom-3 inset-x-4 z-40 md:hidden">
+      <div class="w-full rounded-2xl bg-[#1b1717]/85 backdrop-blur-2xl border border-white/15 p-3 flex items-center justify-between shadow-2xl">
+        <div class="flex items-center gap-2.5 pr-1">
+          <div class="w-9 h-9 rounded-xl bg-[#530201] text-white flex items-center justify-center font-bold text-xs">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[11px] text-neutral-400 block">سفارش انتخابی</span>
+            <span id="mobileTotal" class="text-xs font-bold text-white">۳ آیتم | ۷۳۰,۰۰۰ تومان</span>
+          </div>
+        </div>
+
+        <button class="px-4 py-2 rounded-xl bg-[#530201] hover:bg-[#6c0807] text-white text-xs font-semibold flex items-center gap-1 border border-white/20">
+          <span>مشاهده سبد</span>
+          <svg class="w-3.5 h-3.5 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Minimal Elegant Footer -->
+    <footer class="mt-auto py-8 border-t border-white/10 text-center text-xs text-neutral-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#530201]"></span>
+          <span class="font-serif tracking-wider text-sm font-semibold text-white">MEAT & CHEESE RESTAURANT</span>
+        </div>
+        <p class="text-neutral-400 font-light">
+          تجربه غذایی آرتیزان با استانداردهای بین‌المللی پذیرایی و تأمین تازه
+        </p>
+        <span class="text-[11px] text-neutral-500">
+          © ۱۴۰۳ تمامی حقوق محفوظ است
+        </span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive JavaScript logic -->
+  <script>
+    let currentCartCount = 3;
+
+    function switchCategory(category, element) {
+      // Reset all buttons
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-[#530201]', 'text-white', 'shadow-lg');
+        btn.classList.add('bg-white/5', 'text-neutral-300');
+      });
+
+      // Activate clicked button
+      element.classList.remove('bg-white/5', 'text-neutral-300');
+      element.classList.add('bg-[#530201]', 'text-white', 'shadow-lg');
+    }
+
+    function addToCart(itemName, btnElement) {
+      currentCartCount++;
+      const cartCountEl = document.getElementById('cartCount');
+      if (cartCountEl) {
+        cartCountEl.textContent = currentCartCount;
+        cartCountEl.classList.add('scale-125');
+        setTimeout(() => cartCountEl.classList.remove('scale-125'), 200);
+      }
+
+      // Visual feedback on button
+      const originalText = btnElement.innerHTML;
+      btnElement.innerHTML = `
+        <span>اضافه شد</span>
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+      `;
+      btnElement.classList.add('bg-neutral-800');
+      
+      setTimeout(() => {
+        btnElement.innerHTML = originalText;
+        btnElement.classList.remove('bg-neutral-800');
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
