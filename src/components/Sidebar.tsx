@@ -1,9 +1,7 @@
-import React from 'react';
 import {
-  LayoutDashboard,
+  Package,
   Layers,
-  ShoppingCart,
-  Building2,
+  User,
   LogOut,
   X,
   Shield,
@@ -21,7 +19,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileDrawer = false }) => {
   const {
     currentView,
     setCurrentView,
-    cartUniqueCount,
     setMobileMenuOpen,
     setIsLoggedIn,
     setUserRole,
@@ -29,10 +26,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileDrawer = false }) => {
   } = useApp();
 
   const navItems: { id: ScreenView; label: string; icon: React.ReactNode; badge?: number }[] = [
-    { id: 'dashboard', label: 'داشبورد', icon: <LayoutDashboard size={15} /> },
-    { id: 'catalog', label: 'کاتالوگ و ثبت سفارش', icon: <Layers size={15} /> },
-    { id: 'cart', label: 'سبد خرید', icon: <ShoppingCart size={15} />, badge: cartUniqueCount },
-    { id: 'branch-info', label: 'اطلاعات شعبه', icon: <Building2 size={15} /> },
+    { id: 'dashboard', label: 'سفارش‌ها', icon: <Package size={16} /> },
+    { id: 'catalog', label: 'کاتالوگ محصولات', icon: <Layers size={16} /> },
+    { id: 'branch-info', label: 'پروفایل', icon: <User size={16} /> },
   ];
 
   const handleNavClick = (view: ScreenView) => {

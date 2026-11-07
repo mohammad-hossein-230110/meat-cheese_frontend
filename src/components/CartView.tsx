@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trash2, ChevronLeft, ShoppingBag } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { formatPrice } from '../data/mockData';
+import { formatPrice, toPersianDigits } from '../data/mockData';
 
 export const CartView: React.FC = () => {
   const {
@@ -181,8 +181,8 @@ export const CartView: React.FC = () => {
 
             <div className="space-y-2 text-xs">
               <div className="flex items-center justify-between text-[#777777]">
-                <span>جمع اقلام ({cartUniqueCount} قلم):</span>
-                <span className="font-mono text-[#242424] font-medium">
+                <span>جمع اقلام ({toPersianDigits(cartUniqueCount)} قلم):</span>
+                <span className="text-[#242424] font-bold">
                   {formatPrice(cartSubtotal)} تومان
                 </span>
               </div>
@@ -204,7 +204,7 @@ export const CartView: React.FC = () => {
             <div className="pt-2 border-t border-[#E8E6E3] flex items-baseline justify-between">
               <span className="text-xs font-bold text-[#242424]">مبلغ قابل پرداخت:</span>
               <div className="text-right">
-                <span className="font-mono text-base font-black text-[#530201]">
+                <span className="text-base font-black text-[#530201]">
                   {formatPrice(cartTotal)}
                 </span>
                 <span className="text-[10px] text-[#777777] mr-1">تومان</span>

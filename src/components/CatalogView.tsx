@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag, ChevronLeft, Check, X, Filter, UtensilsCrossed } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { PRODUCTS, formatPrice } from '../data/mockData';
+import { PRODUCTS, formatPrice, toPersianDigits } from '../data/mockData';
 import { Product } from '../types';
 
 export const CatalogView: React.FC = () => {
@@ -113,8 +113,8 @@ export const CatalogView: React.FC = () => {
 
           {/* Search Result Counter */}
           <div className="flex items-center gap-2 self-start md:self-auto">
-            <span className="text-xs font-mono font-medium text-[#242424] bg-[#FAF9F7] px-2.5 py-1 rounded border border-[#E8E6E3]">
-              {filteredProducts.length} از {PRODUCTS.length} قلم کالا
+            <span className="text-xs font-semibold text-[#242424] bg-[#FAF9F7] px-2.5 py-1 rounded border border-[#E8E6E3]">
+              {toPersianDigits(filteredProducts.length)} از {toPersianDigits(PRODUCTS.length)} قلم کالا
             </span>
           </div>
         </div>
@@ -262,9 +262,9 @@ export const CatalogView: React.FC = () => {
 
                     <div className="pt-1.5 flex items-baseline justify-between border-t border-[#F1EFEC]">
                       <span className="text-[10px] text-[#777777]">قیمت مصوب:</span>
-                      <span className="font-mono text-xs font-bold text-[#242424]">
+                      <span className="text-xs font-bold text-[#242424]">
                         {formatPrice(prod.unitPrice)}{' '}
-                        <span className="text-[9px] font-sans font-normal text-[#777777]">تومان</span>
+                        <span className="text-[9px] font-normal text-[#777777]">تومان</span>
                       </span>
                     </div>
                   </div>
@@ -280,8 +280,8 @@ export const CatalogView: React.FC = () => {
                     >
                       +
                     </button>
-                    <span className="w-5 text-center font-mono font-medium text-xs text-[#242424]">
-                      {qty}
+                    <span className="w-5 text-center font-bold text-xs text-[#242424]">
+                      {toPersianDigits(qty)}
                     </span>
                     <button
                       onClick={() => handleQtyChange(prod.id, -1)}

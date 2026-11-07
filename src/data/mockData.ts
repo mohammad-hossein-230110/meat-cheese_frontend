@@ -296,11 +296,22 @@ export const INITIAL_ORDERS: Order[] = [
   },
 ];
 
-// Always return English digits with comma separators
+// Returns Persian digits with comma separators, matching the artisan menu price format
+const PERSIAN_DIGITS = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+
+export const toPersianDigits = (num: number | string | null | undefined): string => {
+  if (num === null || num === undefined) return '';
+  return String(num).replace(/\d/g, (x) => PERSIAN_DIGITS[parseInt(x, 10)]);
+};
+
 export const formatPrice = (price: number): string => {
-  return price.toLocaleString('en-US');
+  const withCommas = Math.round(Number(price || 0)).toLocaleString('en-US');
+  return toPersianDigits(withCommas);
 };
 
 export const toEnglishDigits = (num: number | string): string => {
-  return String(num);
+  return String(num)
+    .replace(/[۰-۹]/g, (d) => String(d.charCodeAt(0) - 1776))
+    .replace(/[٠-٩]/g, (d) => String(d.charCodeAt(0) - 1632));
 };
+

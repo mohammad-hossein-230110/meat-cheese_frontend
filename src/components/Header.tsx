@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-xs border-b border-[#E8E6E3] px-3.5 md:px-5 py-2.5 select-none">
       <div className="flex items-center justify-between gap-3 max-w-6xl mx-auto">
-        {/* Right Zone: Mobile toggle or clean breadcrumb */}
+        {/* Right Zone: Mobile toggle & Brand */}
         <div className="flex items-center gap-2.5">
           <button
             onClick={() => setMobileMenuOpen(true)}
@@ -54,42 +54,62 @@ export const Header: React.FC = () => {
             <Menu size={18} />
           </button>
 
-          {/* Mobile brand icon when sidebar is hidden */}
-          <div className="md:hidden flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5">
             <BrandLogo variant="burgundy" size="sm" />
           </div>
 
-          {/* Desktop breadcrumb */}
-          <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#777777]">
-            <span>سامانه تأمین</span>
-            <ChevronLeft size={12} className="text-[#8a716e]" />
-            <span className="text-[#242424] font-medium">{getViewTitle()}</span>
-          </div>
+          {/* Desktop Direct Nav: Core 3 Sections */}
+          <nav className="hidden md:flex items-center gap-1 pr-3 border-r border-[#E8E6E3]">
+            <button
+              onClick={() => setCurrentView('dashboard')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                currentView === 'dashboard'
+                  ? 'bg-[#530201] text-white font-semibold shadow-xs'
+                  : 'text-[#555555] hover:text-[#242424] hover:bg-[#F1EFEC]'
+              }`}
+            >
+              سفارش‌ها
+            </button>
+            <button
+              onClick={() => setCurrentView('catalog')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                currentView === 'catalog'
+                  ? 'bg-[#530201] text-white font-semibold shadow-xs'
+                  : 'text-[#555555] hover:text-[#242424] hover:bg-[#F1EFEC]'
+              }`}
+            >
+              کاتالوگ محصولات
+            </button>
+            <button
+              onClick={() => setCurrentView('branch-info')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                currentView === 'branch-info'
+                  ? 'bg-[#530201] text-white font-semibold shadow-xs'
+                  : 'text-[#555555] hover:text-[#242424] hover:bg-[#F1EFEC]'
+              }`}
+            >
+              پروفایل
+            </button>
+          </nav>
         </div>
 
-        {/* Center Zone: Warehouse / Dispatch Status */}
-        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-0.5 bg-[#FAF9F7] border border-[#E8E6E3] rounded text-[11px] text-[#242424]">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-          <span>انبار مرکزی فعال · ارسال روز</span>
-        </div>
-
-        {/* Left Zone: Cart Trigger + Standalone Menu + Manager */}
+        {/* Left Zone: Cart Trigger + Standalone Menu + Profile Mini */}
         <div className="flex items-center gap-2">
-          {/* Standalone Restaurant Menu Link (Separate Section) */}
+          {/* Standalone Restaurant Menu Link */}
           <button
             onClick={() => setCurrentView('menu')}
             className="flex items-center gap-1.5 px-2.5 py-1 rounded text-xs bg-[#FAF9F7] hover:bg-[#F1EFEC] text-[#530201] border border-[#E8E6E3] hover:border-[#530201] transition-colors cursor-pointer"
-            title="مشاهده بخش مستقل: منوی دیجیتال مشتریان رستوران"
+            title="مشاهده منوی رستوران"
           >
             <UtensilsCrossed size={13} className="text-[#9E7D56]" />
-            <span className="hidden sm:inline">منوی مستقل رستوران</span>
+            <span className="hidden sm:inline">منوی رستوران</span>
             <span className="sm:hidden">منو</span>
           </button>
 
           {/* Cart Pill */}
           <button
             onClick={() => setCurrentView('cart')}
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs transition-colors ${
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs transition-colors cursor-pointer ${
               currentView === 'cart'
                 ? 'bg-[#530201] text-white'
                 : 'bg-[#FAF9F7] hover:bg-[#F1EFEC] text-[#242424] border border-[#E8E6E3]'
@@ -103,8 +123,12 @@ export const Header: React.FC = () => {
             </span>
           </button>
 
-          {/* User Profile Mini */}
-          <div className="hidden md:flex items-center gap-1.5 pr-2 border-r border-[#E8E6E3] text-right">
+          {/* User Profile Mini (Quick click to Profile) */}
+          <div
+            onClick={() => setCurrentView('branch-info')}
+            className="hidden sm:flex items-center gap-1.5 pr-2 border-r border-[#E8E6E3] text-right cursor-pointer hover:opacity-80 transition-opacity"
+            title="مشاهده پروفایل شعبه"
+          >
             <div className="w-6 h-6 rounded bg-[#530201] text-white flex items-center justify-center text-[10px] font-medium">
               ع‌ر
             </div>

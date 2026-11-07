@@ -1,0 +1,224 @@
+---
+name: Obsidian Reserve
+colors:
+  surface: '#151313'
+  surface-dim: '#151313'
+  surface-bright: '#3b3838'
+  surface-container-lowest: '#100e0e'
+  surface-container-low: '#1d1b1b'
+  surface-container: '#211f1f'
+  surface-container-high: '#2c2929'
+  surface-container-highest: '#373434'
+  on-surface: '#e7e1e0'
+  on-surface-variant: '#dec0bc'
+  inverse-surface: '#e7e1e0'
+  inverse-on-surface: '#323030'
+  outline: '#a68a87'
+  outline-variant: '#57423f'
+  surface-tint: '#ffb4ab'
+  primary: '#ffb4ab'
+  on-primary: '#660809'
+  primary-container: '#6b0d0c'
+  on-primary-container: '#f77569'
+  inverse-primary: '#a63931'
+  secondary: '#ffb4a8'
+  on-secondary: '#630e07'
+  secondary-container: '#83261b'
+  on-secondary-container: '#ff9a8b'
+  tertiary: '#acc7ff'
+  on-tertiary: '#002f67'
+  tertiary-container: '#00326e'
+  on-tertiary-container: '#7a9cde'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#ffdad6'
+  primary-fixed-dim: '#ffb4ab'
+  on-primary-fixed: '#410002'
+  on-primary-fixed-variant: '#85221c'
+  secondary-fixed: '#ffdad4'
+  secondary-fixed-dim: '#ffb4a8'
+  on-secondary-fixed: '#410000'
+  on-secondary-fixed-variant: '#83261b'
+  tertiary-fixed: '#d7e2ff'
+  tertiary-fixed-dim: '#acc7ff'
+  on-tertiary-fixed: '#001a40'
+  on-tertiary-fixed-variant: '#1f4682'
+  background: '#151313'
+  on-background: '#e7e1e0'
+  surface-variant: '#373434'
+typography:
+  display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 34px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: 0em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+    letterSpacing: 0em
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '600'
+    lineHeight: 22px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  margin: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.875rem
+  space-lg: 1.25rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system embodies a dark-first, cinematic culinary aesthetic tailored for bespoke, high-end gastronomic ordering. The experience speaks to discerning patrons seeking curated charcuterie, dry-aged cuts, and artisanal cheese selections. It evokes the sensory intimacy of an exclusive dimly lit cellar, tactile leather-bound menus, and ember-lit degustation spaces.
+
+The visual direction merges **Minimalism** with **Low-Contrast Tonal Layering**:
+- **Atmospheric & Subdued:** Depth is achieved through dark charcoal tonalities rather than heavy drop shadows, eliminating visual noise.
+- **RTL-First Elegance:** Built from the ground up for right-to-left layout dynamics, pairing Persian typography with spacious margins and rhythmic vertical cadence.
+- **Restrained Luxury:** Strict omission of gratuitous ornaments. Visual prestige relies entirely on precise hairline dividers, rich burgundy accents, and unhurried whitespace.
+
+## Colors
+
+The palette embraces deep carbon tones, rich burgundy reds reminiscent of vintage Bordeaux, and warm calcified whites.
+
+### Surface Architecture
+- **Base Canvas (`#121010`):** The primary canvas background; an ultra-deep warm charcoal preventing the harshness of pure black (`#000000`).
+- **Surface Level 1 (`#1c1817`):** Elevated cards, sheet drawers, and list row backgrounds.
+- **Surface Level 2 (`#241f1e`):** Floating controls, active chips, stepper containers, and input fields.
+
+### Brand Accents
+- **Primary Interactive (`#6b0d0c`):** Vibrant deep burgundy designed to provide high-legibility touch targets against dark canvas layers.
+- **Deep Wine (`#530201`):** Subdued brand base, utilized for pressed states, badges, and deep gradient underlays.
+- **Accent Muted (`rgba(107, 13, 12, 0.18)`): Soft tinted wash for selected item highlights and active category pills.
+
+### Content & Stroke Hierarchy
+- **Text Primary (`#f7f5f2`):** Soft parchment white delivering readable contrast without ocular fatigue.
+- **Text Secondary (`#a8a09b`):** Muted warm sand for dish descriptions, weights, and Persian numerals.
+- **Text Tertiary / Disabled (`#7d7570`):** Subtle captions, dietary indicators, and inactive tab titles.
+- **Hairline Borders (`rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.12)`): Ultra-fine delineation preserving structural layout without visible compartmentalization.
+
+## Typography
+
+Typography is set up to support elegant Persian text layouts using rhythmic vertical metrics and clear proportional sizing.
+
+### Typesetting & RTL Rules
+- **Text Alignment:** Right-aligned by default across all layouts (`dir="rtl"`). Numeric values (prices, gram weights, curing aging times) follow Persian numeral conventions (`۰۱۲۳۴۵۶۷۸۹`).
+- **Line Heights:** Generous line heights are maintained (1.5–1.6× font size) to allow complex Persian ascenders, descenders, and tashkeel marks to breathe without overlap.
+- **Weights:** Restricted to three weights: Regular (400) for descriptions, Medium (500) for subheads and badges, and SemiBold/Bold (600/700) for culinary names, pricing, and key calls-to-action.
+
+## Layout & Spacing
+
+The layout is optimized for single-hand mobile interaction on modern viewport widths (390px baseline).
+
+### Canvas Architecture
+- **Fluid Single-Column Core:** Content flows strictly in a single column with a baseline screen margin of `1.25rem` (20px), maximizing thumb reach and reading comfort.
+- **Vertical Rhythm:** 4px baseline sub-grid. Tight groupings (dish title + dietary tag) use `space-xs` (4px); medium pairs (title + price) use `space-sm` (8px); card internal padding leverages `space-md` (14px) to `space-lg` (20px).
+- **RTL Fluidity:** Margins and paddings use logical properties (`margin-inline-start`, `padding-inline-end`). Leading thumbnails sit on the physical right edge; price and quantity selectors anchor on the physical left edge.
+- **Bottom Navigation Clearance:** An explicit floating clearance of `5.5rem` (88px) is enforced at the bottom of scroll containers to preserve safe scrolling above fixed order bars.
+
+## Elevation & Depth
+
+This design system avoids traditional high-diffuse skeuomorphic drop shadows in favor of **low-contrast tonal depth** and **frosted translucency**.
+
+### Depth Hierarchy
+1. **Canvas (`#121010`):** Base layer supporting overall page scrolling.
+2. **Structural Cards (`#1c1817`):** Elevated purely via background contrast and a microscopic top border: `1px solid rgba(255, 255, 255, 0.08)`.
+3. **Floating Overlays & Sticky Nav:** `rgba(18, 16, 16, 0.82)` with `backdrop-filter: blur(16px)` and a subtle bottom hairline `1px solid rgba(255, 255, 255, 0.06)`.
+4. **Primary CTA & Focus Nodes:** Elevated using a focused atmospheric burgundy glow rather than black shadows: `box-shadow: 0 8px 24px -4px rgba(107, 13, 12, 0.35)`.
+5. **Interactive Pressed States:** Surfaces scale down minutely (`scale(0.985)`) with an immediate tint darkening, conveying physical resistance.
+
+## Shapes
+
+The shape vocabulary uses subtle, soft-cornered geometry (level 1: 4px base radius) to evoke the clean lines of slate boards, marble counters, and butcher blocks.
+
+- **Buttons & Primary Cards:** Base curvature is `0.5rem` (8px), avoiding overly pill-like bubbles in favor of tailored sophistication.
+- **Badges & Micro Chips:** Radii set to `0.25rem` (4px).
+- **Dish Imagery:** Fitted with `0.5rem` (8px) borders, with optional unbordered full-bleed hero treatments.
+- **Modals & Bottom Drawers:** Top edges curve at `0.75rem` (12px) to denote pull-up ergonomics without losing structural rigor.
+
+## Components
+
+### Buttons & Interactive CTAs
+- **Primary Action (Add to Order / Final Checkout):** Filled `#6b0d0c` with `#f7f5f2` SemiBold text. 52px height for generous mobile hit targets. Subtle top edge reflection via an inner hairline shadow (`inset 0 1px 0 rgba(255, 255, 255, 0.15)`).
+- **Secondary Action (Customization / Wine Pairing):** `#1c1817` fill with hairline border `rgba(255, 255, 255, 0.12)` and `#f7f5f2` text.
+- **Ghost/Tertiary:** No background, `#a8a09b` text, transforming to `#f7f5f2` on active tap.
+
+### Dish & Product Cards
+- **Architecture:** Unboxed or single-tier container strategy. Avoids nested borders within cards.
+- **Horizontal Ordering Row (Default Menu Item):**
+  - Right: Dish title in `headline-sm`, Persian weight/aging metadata (`body-sm`, `#a8a09b`), and brief provenance note.
+  - Left: Clean numeric price (`label-lg`, `#f7f5f2`) directly above a minimal 36px plus/stepper button.
+  - Optional Far-Right: 72×72px rounded thumbnail cropped tightly on the charcuterie/cheese texture.
+- **Dividers:** Dishes separated by hairline rules: `1px solid rgba(255, 255, 255, 0.06)`.
+
+### Category Navigation & Filter Chips
+- **Format:** Horizontally scrolling pill strip (`dir="rtl"`) along the top with zero scrollbars.
+- **Inactive:** `#1c1817` surface, `1px solid rgba(255, 255, 255, 0.08)`, text `#a8a09b`.
+- **Active:** `#6b0d0c` surface, border `rgba(255, 255, 255, 0.2)`, text `#f7f5f2`.
+
+### Inputs & Quantity Steppers
+- **Text Inputs (Special Instructions / Table Selection):** Dark surface `#1c1817`, text `#f7f5f2`, placeholder `#7d7570`. Hairline border turns to burgundy `#6b0d0c` upon focus.
+- **Steppers:** Compact pill with `-` and `+` touch areas (40×40px min target), with Persian numeral count centered in bold text.
+
+### Floating Cart Summary Bar
+- **Positioning:** Fixed 16px above the viewport bottom, inset with `1.25rem` margin.
+- **Style:** Deep charcoal glass container (`rgba(28, 24, 23, 0.94)`, `backdrop-filter: blur(20px)`), perimeter bordered by hairline translucent white.
+- **Layout:** Item count and total price in Persian typography on the right; "تکمیل سفارش" (Complete Order) CTA button on the left.

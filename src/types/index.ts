@@ -11,7 +11,16 @@ export type ScreenView =
   | 'branch-info'
   | 'owner-login'
   | 'owner-orders'
-  | 'menu';
+  | 'menu'
+  // Customer Ordering Pages:
+  | 'customer-auth'          // ورود و ثبت‌نام | MEAT & CHEESE
+  | 'customer-checkout'      // تسویه نهایی سفارش | MEAT & CHEESE
+  | 'customer-cart'          // سبد خرید | MEAT & CHEESE
+  | 'customer-address'       // انتخاب و ثبت آدرس تحویل | MEAT & CHEESE
+  | 'customer-orders'        // تاریخچه سفارش‌ها | MEAT & CHEESE
+  | 'customer-invoice'       // جزییات سفارش و فاکتور | MEAT & CHEESE
+  | 'customer-profile'       // پروفایل من | MEAT & CHEESE
+  | 'customer-loyalty';      // باشگاه مشتریان | MEAT & CHEESE
 
 export type UserRole = 'branch' | 'owner';
 

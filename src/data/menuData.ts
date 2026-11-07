@@ -26,7 +26,7 @@ export const ARTISAN_MENU_ITEMS: MenuItem[] = [
     ingredients: ['گوشت گوساله چرخ‌شده تازه', 'پنیر چدار دست‌ساز', 'پیاز کاراملی شده با کره', 'سس اختصاصی M&C', 'نان بریوش کنجدی'],
     tastingNotes: ['بافت کرانچی با مغز آبدار', 'طعم غنی پنیر چدار ذوب‌شده', 'شیرینی ملایم پیاز کاراملی'],
     pairingSuggestion: 'پیشنهاد سرآشپز: لیموناد دودی بلوط با رزماری زغالی',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2GvEX3Tv2SA8C6zpfxBdkWFbdYBxN2NZe3SwPFb35TqRVMyFGfAf6mxmYEow0m_jAx_4yTJ8HM5ODYy7EpMLKip12LWhDaaq1ocwDPOZJcw8faUHy71kelmQwiE6l0Sd587tCdPbMS7cl1CNWq2Ks-8nDbZDYc7nHqwAlcTRX9wK67IkZiWmDOyUf_3buulJxfQmbi__WDrkLcP3eXxnWsB2T4hsBiX1ifoTlQw',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&auto=format&fit=crop&q=80',
     inStock: true,
     preparationTime: '۱۵ الی ۱۸ دقیقه',
     nutrition: {
@@ -106,7 +106,7 @@ export const ARTISAN_MENU_ITEMS: MenuItem[] = [
     ingredients: ['پاسترامی گوشت گوساله دودی دست‌ساز', 'پنیر سوئیسی امرنتال ذوب‌شده', 'خردل دیژون دانه‌درشت', 'خیارشور تخمیری ارگانیک', 'نان خمیرترش برشته'],
     tastingNotes: ['عطر دودی فلفلی عمیق', 'کشش دلپذیر پنیر سوئیسی', 'ترشی اشتهاآور خردل دیژون'],
     pairingSuggestion: 'پیشنهاد سرآشپز: موهیتو دست‌ساز با نعناع تازه',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDE5bO6eQgRnSrntozVVClTWEZpO8Ec33Lv4f_G9ruKXGNrSOHTrL7rS--_BbPJZr4mU_Qjd-66An_DQWg2QpxH97E2g2F16V2c7D50dB-2KIBxKk5fqqvoQa7geuob2HPiJyln36CqYggT-YdVfsdepExK_3QrgH2g9xhZzaTX_Tqcx1bZk7pcnpDlRAKdXyFFbJxBLtTr7hKEVtxKmbkD9sJstMY3rEQmN9Ald48',
+    image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=800&auto=format&fit=crop&q=80',
     inStock: true,
     preparationTime: '۱۲ الی ۱۵ دقیقه',
     nutrition: {
@@ -186,7 +186,7 @@ export const ARTISAN_MENU_ITEMS: MenuItem[] = [
     ingredients: ['کاهو پیچ تازه و کرانچی', 'فیله گوساله گریل‌شده اسلایسی', 'کروتان سیر نان خمیرترش', 'ورقه‌های پارمزان کهنه', 'سس سزار بدون مایونز صنعتی'],
     tastingNotes: ['طراوت و تردی کاهو رومی', 'شوری اشتهاآور پنیر پارمزان', 'نرمی فیله مارینه'],
     pairingSuggestion: 'نوشیدنی موهیتو نعناع کوهی تازه',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4mn_zDdPrc-eaKoJj73Jk_GLFHp0N6aGvVaA6gHWUv4TyXyT6pBEzNiVZ81tgMroCSqWJPvzLEEj-nUJBB4rWQ4fmqNpbb_7uTjYvmqUoyBfV3pEAPnimuFGJbkIE9dywXqKwKwI-PiUo3JuzGUeRP8iSbJ6frCAmqrcpBhp731-cYSk8PMN48VgGzqun0LMFvAEBu1akFoq-c0zmROFslUDn4k2yx1r51NGMmyo',
+    image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=800&auto=format&fit=crop&q=80',
     inStock: true,
     preparationTime: '۱۰ الی ۱۲ دقیقه',
     nutrition: {

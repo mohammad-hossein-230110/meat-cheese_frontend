@@ -52,6 +52,9 @@ const getInitialView = (): ScreenView => {
     if (params.get('view') === 'menu' || window.location.hash === '#menu') {
       return 'menu';
     }
+    if (params.get('view') === 'catalog') {
+      return 'catalog';
+    }
     if (params.get('view') === 'dashboard') {
       return 'dashboard';
     }
@@ -59,7 +62,7 @@ const getInitialView = (): ScreenView => {
       return 'owner-login';
     }
   }
-  return 'catalog';
+  return 'menu';
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

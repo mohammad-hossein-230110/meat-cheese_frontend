@@ -17,6 +17,16 @@ import { OwnerLoginView } from './components/OwnerLoginView';
 import { OwnerOrdersView } from './components/OwnerOrdersView';
 import { ArtisanMenuView } from './components/menu/ArtisanMenuView';
 
+// The 8 Newly Requested Full Pages:
+import { CustomerAuthView } from './components/CustomerAuthView';
+import { CustomerCartView } from './components/CustomerCartView';
+import { CustomerAddressView } from './components/CustomerAddressView';
+import { CustomerCheckoutView } from './components/CustomerCheckoutView';
+import { CustomerOrdersView } from './components/CustomerOrdersView';
+import { CustomerInvoiceView } from './components/CustomerInvoiceView';
+import { CustomerProfileView } from './components/CustomerProfileView';
+import { CustomerLoyaltyView } from './components/CustomerLoyaltyView';
+
 const AppContent: React.FC = () => {
   const {
     currentView,
@@ -25,6 +35,46 @@ const AppContent: React.FC = () => {
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useApp();
+
+  // 1. ورود و ثبتنام | MEAT & CHEESE
+  if (currentView === 'customer-auth') {
+    return <CustomerAuthView />;
+  }
+
+  // 2. سبد خرید | MEAT & CHEESE
+  if (currentView === 'customer-cart') {
+    return <CustomerCartView />;
+  }
+
+  // 3. انتخاب و ثبت آدرس تحویل | MEAT & CHEESE
+  if (currentView === 'customer-address') {
+    return <CustomerAddressView />;
+  }
+
+  // 4. تسویه نهایی سفارش | MEAT & CHEESE
+  if (currentView === 'customer-checkout') {
+    return <CustomerCheckoutView />;
+  }
+
+  // 5. تاریخچه سفارش‌ها | MEAT & CHEESE
+  if (currentView === 'customer-orders') {
+    return <CustomerOrdersView />;
+  }
+
+  // 6. جزییات سفارش و فاکتور | MEAT & CHEESE
+  if (currentView === 'customer-invoice') {
+    return <CustomerInvoiceView />;
+  }
+
+  // 7. پروفایل من | MEAT & CHEESE
+  if (currentView === 'customer-profile') {
+    return <CustomerProfileView />;
+  }
+
+  // 8. باشگاه مشتریان | MEAT & CHEESE
+  if (currentView === 'customer-loyalty') {
+    return <CustomerLoyaltyView />;
+  }
 
   // Standalone Menu section (completely isolated from owner & branch portal)
   if (currentView === 'menu') {
@@ -45,7 +95,7 @@ const AppContent: React.FC = () => {
     return <LoginView />;
   }
 
-  // Render current screen content
+  // Render current screen content (B2B Supply branch views)
   const renderScreen = () => {
     switch (currentView) {
       case 'dashboard':
